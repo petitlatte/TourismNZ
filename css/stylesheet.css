@@ -1,0 +1,299 @@
+@charset "UTF-8";
+
+body{
+	padding:0;
+	margin:0;
+		font-family: 'Quicksand', sans-serif;
+
+
+}
+
+.headA {
+	display:inline-block;
+}
+
+header {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:100;
+	width:100%;
+	background-color: rgba(0,0,0,0.5);
+}
+
+
+.headB ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.headB a{
+	color:white;
+	display:block;
+	padding: 15px;
+	font-size:16px;
+	text-decoration: none;
+}
+
+.headB a:hover{
+	background-color: rgba(0,0,0,0,0.3);
+}
+
+
+
+.conA{
+	display:flex;
+	align-items:center;
+	background: url("../img/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	width:100vw;
+}
+
+
+
+
+.conA h1{
+
+	text-align: center;
+	color: white;
+	font-size: 15vw;
+	text-shadow: 1px 2px 3px black;
+}
+
+
+
+
+.conA .container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/*SLIDER CONTAINER CSS*/
+
+
+.slider-container{
+		background-color: rgba(0,0,0,0.3);
+		min-height: 400px;
+		width:1200px;
+		margin-left: auto;
+		margin-right:auto;
+}
+
+.slider-container .slide {
+	display:flex;
+	margin:10px;
+	height:400px;
+}
+
+
+.slider-container .slide .text{
+	flex:3;
+	padding:20px;
+	line-height: 1.8;
+	color:white;
+}
+
+.slider-container .slide h2{
+	font-weight:bold;
+	color:white;
+	font-size:30px;
+	}
+
+.slider-container .slide hr{
+	width:20%;
+	height:1px;
+	background-color: white;
+
+}	
+
+.slider-container .slide .photo{
+	flex:2;
+	background-position: center;
+	background-size: cover;
+	margin:20px;
+}
+
+.slider-container .slide #photo1{
+		background-image:url("../img/slideimg001.jpg");
+}
+
+.slider-container .slide #photo2{
+		background-image:url("../img/slideimg002.jpg");
+}
+
+.slider-container .slide #photo3{
+		background-image:url("../img/slideimg003.jpg");
+}
+
+.slide-container .slidebutton{
+		border:none;
+		outline:none;
+		background:none;
+		font-size:28px;
+		opacity:0.5;
+		cursor:pointer;
+}
+
+.button {
+	background:rgba(0,0,0,0.3);
+    border: solid 1px white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button:hover{
+	transition: 0.5s ease;
+	background-color: rgba(0,0,0,0.7);
+}
+
+
+/*HOT SPOT CSS*/
+
+.conB{
+	display:flex;
+	align-items:center;
+	background: url("../img/background002.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	width:100vw;
+
+}
+
+
+.conB .container {
+	display:flex;
+	margin-top: 50px;
+	min-height:600px;
+	background-color: rgba(0,0,0,0.7);
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.conB .container #map {
+	flex:3;
+}
+
+.conB .container .text{
+	flex:2;
+	position:relative;
+	color:white;
+	padding:20px;
+	line-height:1.8;
+}
+
+.conB h2{
+	font-size:30px;
+}
+
+#selectlocation{
+	text-align: center;
+	padding: 5px 10px 5px 10px;
+	font-size:20px;
+}
+
+
+/*.conC{
+	display:flex;
+	align-items:center;
+	background: url("../img/background003.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	width:100vw;
+
+}*/
+
+/*MEDIA QUERIES CSS*/
+
+@media(min-width:768px){
+	.conA h1{
+		padding-top:30px;
+		font-size:70px;
+	}
+
+	header .container{
+		display:flex;
+		align-items:center;
+		justify-content: space-between;
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right:auto;
+	}
+	.headB ul{
+		display:flex;
+	}
+
+	.headC{
+		display:none;
+	}
+
+	.headB{
+		display:block !important;
+	}
+
+}
+
+@media(max-width:767px){
+
+
+	.conA h1{
+		padding-top:30px;
+		text-align: center;
+	}
+	header .container-small{
+		display:flex;
+		align-items:center;
+		justify-content: space-between;
+	}
+
+	.headC{
+		color:white;
+		margin-right:20px;
+		padding:0;
+		border:none;
+		outline:none;
+		background:none;
+		font-size:28px;
+		opacity:0.5;
+		cursor:pointer;
+	}
+
+	.headC:hover{
+		opacity:0.8;
+		transition: 1s ease;
+	}
+
+	.headB{
+		background-color: rgba(0,0,0,0.5);
+		display:none;
+		padding: 10px;
+	}
+
+	.headB a:hover{
+		margin:0;
+		transition: 0.5s ease;
+		background-color: rgba(0,0,0,0.8);
+
+	}
+
+	.slider-container{
+		max-width:90%;
+		margin-left: auto;
+		margin-right: auto;	
+	}
+}
+
